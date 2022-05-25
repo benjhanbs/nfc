@@ -1,0 +1,6 @@
+FROM node:14.14-alpine
+WORKDIR /app
+COPY . .
+RUN npm i --production
+RUN ls
+CMD npm run build
