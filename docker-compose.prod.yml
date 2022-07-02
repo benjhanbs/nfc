@@ -11,9 +11,6 @@ services:
       - ./db/data:/var/lib/postgresql/data
     restart: always
     command: -p $DB_PORT
-    volumeMounts:
-      - mountPath: /var/lib/postgresql/data
-        name: postgres-data
   api:
     depends_on:
       - db
